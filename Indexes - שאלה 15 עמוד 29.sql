@@ -1,0 +1,16 @@
+USE [eDate]
+
+GO
+
+CREATE NONCLUSTERED INDEX [IX_MembersSessions_EndDateTime#EndReasonId] ON [Operation].[MemberSessions]
+(
+	[EndDateTime] ASC,
+	[EndReasonId] ASC
+)
+INCLUDE ([MemberId])
+WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = ON, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 80)
+ON [PRIMARY]
+
+GO
+
+
