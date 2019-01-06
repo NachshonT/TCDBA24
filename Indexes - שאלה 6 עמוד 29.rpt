@@ -1,0 +1,5 @@
+﻿
+(1 row(s) affected)
+Msg 2601, Level 14, State 1, Line 3
+Cannot insert duplicate key row in object 'Operation.Members' with unique index 'IQ_Members_UserName#Password'. The duplicate key value is (NachshonT, 8888).
+The statement has been terminated.
