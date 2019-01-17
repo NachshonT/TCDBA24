@@ -1,0 +1,15 @@
+﻿
+-------------------------------------------
+SELECT * FROM [Lists].[Genders] returned : 
+
+Msg 229, Level 14, State 5, Line 2
+The SELECT permission was denied on the object 'Genders', database 'eDate', schema 'Lists'.
+
+---------------------------------------------
+SELECT * FROM [Lists].[V_Genders] returned : 
+
+Id   Name
+---- --------------------------------------------------
+1    Male
+2    Female
+
