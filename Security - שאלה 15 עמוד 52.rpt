@@ -1,0 +1,6 @@
+﻿
+-------------------------------------------------------
+SELECT * FROM [eDate].[Operation].[Members] returned : 
+
+Msg 229, Level 14, State 5, Line 2
+The SELECT permission was denied on the object 'Members', database 'eDate', schema 'Operation'.
