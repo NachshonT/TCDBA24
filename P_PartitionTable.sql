@@ -4,8 +4,8 @@ GO
 CREATE PROCEDURE P_PartitionTable
 (
 	@TableName SYSNAME = 'PartitionedTable',
-	@CoulumnName SYSNAME = 'PartitioningColumn',
-	@SchemeName SYSNAME = 'PartitioningSceme',
+	@ColumnName SYSNAME = 'PartitioningColumn',
+	@SchemeName SYSNAME = 'PartitioningScheme',
 	@FunctionName SYSNAME = 'PartitioningFunction'
 )
 AS
