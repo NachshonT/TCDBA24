@@ -31,35 +31,19 @@ GO
 SELECT * FROM T_Test
 GO
 
--- Create a SQL-CLR stored procedure that insert a row into the T_Test table for 'יצחק' 'יצחקי'
-CREATE PROCEDURE P_InsertNew
-AS
-EXTERNAL NAME [SQL_CLR].DML.InsertNew
-GO
-
-EXECUTE P_InsertNew
-GO
-
-DROP PROCEDURE P_InsertNew
-GO
-
--- Show data currently in T_Test
-SELECT * FROM T_Test
-GO
-
  --SP with input parameters 
-CREATE PROCEDURE P_ParamInsert (@FirstName AS  NVARCHAR(100), @LastName AS NVARCHAR(100))
+CREATE PROCEDURE P_CLR_Insert (@FirstName AS  NVARCHAR(100), @LastName AS NVARCHAR(100))
 AS
-EXTERNAL NAME [SQL_CLR].DML.ParamInsert
+EXTERNAL NAME [SQL_CLR].CLR_DML.CLR_Insert
 GO
 
-EXECUTE P_ParamInsert @FirstName = 'יעקב', @LastName = 'יעקבי'
+EXECUTE P_CLR_Insert @FirstName = 'יעקב', @LastName = 'יעקבי'
 GO
 
-EXECUTE P_ParamInsert @FirstName = 'יוסף', @LastName = 'יוספי'
+EXECUTE P_CLR_Insert @FirstName = 'יצחק', @LastName = 'יצחקי'
 GO
 
-DROP PROCEDURE P_ParamInsert
+DROP PROCEDURE P_CLR_Insert
 GO
 
 -- Show data currently in T_Test
@@ -67,15 +51,15 @@ SELECT * FROM T_Test
 GO
 
 -- Update row with ID = 3
-CREATE PROCEDURE P_ParamUpdate (@ID AS INT, @FirstName AS NVARCHAR(100), @LastName AS NVARCHAR(100))
+CREATE PROCEDURE P_CLR_Update (@ID AS INT, @FirstName AS NVARCHAR(100), @LastName AS NVARCHAR(100))
 AS
-EXTERNAL NAME [SQL_CLR].DML.ParamUpdate
+EXTERNAL NAME [SQL_CLR].CLR_DML.CLR_Update
 GO
 
-EXECUTE P_ParamUpdate @ID = 3, @FirstName = 'דויד', @LastName = 'דוידי'
+EXECUTE P_CLR_Update @ID = 3, @FirstName = 'דויד', @LastName = 'דוידי'
 GO
 
-DROP PROCEDURE P_ParamUpdate
+DROP PROCEDURE P_CLR_Update
 GO
 
 -- Show data currently in T_Test
@@ -83,15 +67,15 @@ SELECT * FROM T_Test
 GO
 
 -- Delete row with ID = 4
-CREATE PROCEDURE P_ParamDelete (@ID AS INT)
+CREATE PROCEDURE P_CLR_Delete (@ID AS INT)
 AS
-EXTERNAL NAME [SQL_CLR].DML.ParamDelete
+EXTERNAL NAME [SQL_CLR].CLR_DML.CLR_Delete
 GO
 
-EXECUTE P_ParamDelete @ID = 4
+EXECUTE P_CLR_Delete @ID = 2
 GO
 
-DROP PROCEDURE P_ParamDelete
+DROP PROCEDURE P_CLR_Delete
 GO
 
 -- Show data currently in T_Test
