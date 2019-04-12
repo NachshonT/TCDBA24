@@ -25,4 +25,9 @@ SET IDENTITY_INSERT [dbo].[T_TransactionTypes] OFF
 
 INSERT [dbo].[T_Genders] ([GenderId], [Gender]) VALUES (0, N'Male')
 INSERT [dbo].[T_Genders] ([GenderId], [Gender]) VALUES (1, N'Female')
+                                       
+INSERT [dbo].[T_Countries] ([CountryId], [CountryName]) VALUES (1, N'Israel')
+INSERT [dbo].[T_Countries] ([CountryId], [CountryName]) VALUES (2, N'USA')
+INSERT [dbo].[T_Countries] ([CountryId], [CountryName]) VALUES (3, N'UK')
+
 GO
