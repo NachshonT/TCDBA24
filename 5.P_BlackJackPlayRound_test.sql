@@ -16,7 +16,7 @@ EXECUTE @RC = [dbo].[P_BlackJackPlayRound]
   ,@RequestedCardsCount
   ,@BetAmount
 
--- Betting an invalid amount - more than the deposited amount
+-- Betting an invalid amount - more than the Player's Balance
 set @PlayerId = 1
 set @RequestedCardsCount = 3
 set @BetAmount = 2000
