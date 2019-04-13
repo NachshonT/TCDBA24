@@ -13,10 +13,10 @@ EXECUTE [dbo].[P_SlotMachinePlayRound]
    @PlayerId
   ,@BetAmount
 
--- Betting the incorrect amount of money (more than on the deposit)
+-- Betting an incorrect amount of money - more than the Player's Balance
 
 set @PlayerId = 1
-set @BetAmount = 30
+set @BetAmount = 3000
 
 EXECUTE [dbo].[P_SlotMachinePlayRound] 
    @PlayerId
